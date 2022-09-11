@@ -73,7 +73,7 @@ struct AddView: View {
              
             }
             .frame(maxWidth: .infinity, idealHeight:  200)
-            .background(.ultraThinMaterial)
+            .background(Color("Secondary"))
             
             
             HStack{
@@ -91,7 +91,7 @@ struct AddView: View {
                               
                         }
                     }
-                    .background(.ultraThinMaterial)
+                    .background(Color("Secondary"))
                 }
             }
         }
@@ -112,7 +112,7 @@ struct AddView: View {
                 .foregroundColor(.gray)
             TextField("I lost my keys", text: $vm.title)
                 .padding(10)
-                .background(.ultraThinMaterial)
+                .background(Color("Secondary"))
                 .cornerRadius(5)
         }
     }
@@ -125,7 +125,7 @@ struct AddView: View {
             
             TextEditor(text: $vm.description)
                 .padding(10)
-                .background(.ultraThinMaterial)
+                .background(Color("Secondary"))
                 .frame(maxWidth: .infinity, minHeight: 200)
                 .cornerRadius(5)
         }
@@ -168,7 +168,7 @@ struct AddView: View {
                 .foregroundColor(.gray)
             TextField("+38067....", text: $vm.phone)
                 .padding(10)
-                .background(.ultraThinMaterial)
+                .background(Color("Secondary"))
                 .cornerRadius(5)
         }
     }

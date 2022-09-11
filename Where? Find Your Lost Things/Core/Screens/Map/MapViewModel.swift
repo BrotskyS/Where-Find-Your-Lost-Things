@@ -25,6 +25,7 @@ class MapViewModel: ObservableObject {
     ]
     
     func setSelectedAnotation(name: String?){
+        print("setSelectedAnotation")
         withAnimation(.spring()){
             selectedAnotation = name
         }

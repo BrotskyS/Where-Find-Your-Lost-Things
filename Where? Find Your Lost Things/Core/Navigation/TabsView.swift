@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabsView: View {
+    
     var body: some View {
         TabView {
             HomeView()
@@ -26,9 +27,9 @@ struct TabsView: View {
                         .font(.largeTitle)
                 }
             
-            HomeView()
+            ChatsView()
                 .tabItem {
-                    Label("Notification", systemImage: "bell")
+                    Label("Chat", systemImage: "bell")
                 }
             
             HomeView()

@@ -21,6 +21,9 @@
 		0D62F20628CE442C00E343E7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F20528CE442C00E343E7 /* MapView.swift */; };
 		0D62F20828CE443F00E343E7 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F20728CE443F00E343E7 /* MapViewModel.swift */; };
 		0D62F20B28CE57AD00E343E7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F20A28CE57AD00E343E7 /* LocationManager.swift */; };
+		0D62F20E28CE792000E343E7 /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F20D28CE792000E343E7 /* ChatsView.swift */; };
+		0D62F21028CE792800E343E7 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F20F28CE792800E343E7 /* ChatViewModel.swift */; };
+		0D62F21228CE83A000E343E7 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F21128CE83A000E343E7 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		0D62F20528CE442C00E343E7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0D62F20728CE443F00E343E7 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		0D62F20A28CE57AD00E343E7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0D62F20D28CE792000E343E7 /* ChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
+		0D62F20F28CE792800E343E7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		0D62F21128CE83A000E343E7 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 		0D62F1F328CD3A2F00E343E7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0D62F20C28CE78FC00E343E7 /* Chat */,
 				0D62F20428CE442000E343E7 /* Map */,
 				0D62F1FA28CDE95400E343E7 /* Add */,
 				0D62F1F428CD3A3A00E343E7 /* Home */,
@@ -167,6 +174,16 @@
 				0D62F20A28CE57AD00E343E7 /* LocationManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		0D62F20C28CE78FC00E343E7 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				0D62F20D28CE792000E343E7 /* ChatsView.swift */,
+				0D62F20F28CE792800E343E7 /* ChatViewModel.swift */,
+				0D62F21128CE83A000E343E7 /* ChatView.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +262,10 @@
 				0D62F1FE28CDEB9300E343E7 /* AddViewModel.swift in Sources */,
 				0D62F1FC28CDE96300E343E7 /* AddView.swift in Sources */,
 				0D62F20328CE401400E343E7 /* MapItemView.swift in Sources */,
+				0D62F20E28CE792000E343E7 /* ChatsView.swift in Sources */,
+				0D62F21228CE83A000E343E7 /* ChatView.swift in Sources */,
 				0D62F20828CE443F00E343E7 /* MapViewModel.swift in Sources */,
+				0D62F21028CE792800E343E7 /* ChatViewModel.swift in Sources */,
 				0D62F1F628CD3A4200E343E7 /* HomeView.swift in Sources */,
 				0D62F20B28CE57AD00E343E7 /* LocationManager.swift in Sources */,
 				0D62F20628CE442C00E343E7 /* MapView.swift in Sources */,
