@@ -2,12 +2,12 @@
 //  ChatViewModel.swift
 //  Where? Find Your Lost Things
 //
-//  Created by Sergiy Brotsky on 11.09.2022.
+//  Created by Sergiy Brotsky on 13.09.2022.
 //
 
 import Foundation
 
 
 class ChatViewModel: ObservableObject {
-    @Published var searchText: String = ""
+    @Published var messageText: String = ""
 }

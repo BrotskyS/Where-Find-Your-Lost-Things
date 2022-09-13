@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D13748B28D0986100E97A6E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D13748A28D0986100E97A6E /* Message.swift */; };
+		0D13748D28D098BF00E97A6E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D13748C28D098BF00E97A6E /* MessageView.swift */; };
+		0D13748F28D09C3600E97A6E /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D13748E28D09C3600E97A6E /* ChatViewModel.swift */; };
 		0D62F1E228CD357400E343E7 /* Where__Find_Your_Lost_ThingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F1E128CD357400E343E7 /* Where__Find_Your_Lost_ThingsApp.swift */; };
 		0D62F1E428CD357400E343E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F1E328CD357400E343E7 /* ContentView.swift */; };
 		0D62F1E628CD357700E343E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D62F1E528CD357700E343E7 /* Assets.xcassets */; };
@@ -22,11 +25,16 @@
 		0D62F20828CE443F00E343E7 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F20728CE443F00E343E7 /* MapViewModel.swift */; };
 		0D62F20B28CE57AD00E343E7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F20A28CE57AD00E343E7 /* LocationManager.swift */; };
 		0D62F20E28CE792000E343E7 /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F20D28CE792000E343E7 /* ChatsView.swift */; };
-		0D62F21028CE792800E343E7 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F20F28CE792800E343E7 /* ChatViewModel.swift */; };
+		0D62F21028CE792800E343E7 /* ChatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F20F28CE792800E343E7 /* ChatsViewModel.swift */; };
 		0D62F21228CE83A000E343E7 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F21128CE83A000E343E7 /* ChatView.swift */; };
+		0D62F21528D074D700E343E7 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F21428D074D700E343E7 /* Main.swift */; };
+		0D62F21728D075BC00E343E7 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F21628D075BC00E343E7 /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D13748A28D0986100E97A6E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		0D13748C28D098BF00E97A6E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		0D13748E28D09C3600E97A6E /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		0D62F1DE28CD357400E343E7 /* Where? Find Your Lost Things.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where? Find Your Lost Things.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D62F1E128CD357400E343E7 /* Where__Find_Your_Lost_ThingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Where__Find_Your_Lost_ThingsApp.swift; sourceTree = "<group>"; };
 		0D62F1E328CD357400E343E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,8 +51,10 @@
 		0D62F20728CE443F00E343E7 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		0D62F20A28CE57AD00E343E7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0D62F20D28CE792000E343E7 /* ChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
-		0D62F20F28CE792800E343E7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		0D62F20F28CE792800E343E7 /* ChatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewModel.swift; sourceTree = "<group>"; };
 		0D62F21128CE83A000E343E7 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		0D62F21428D074D700E343E7 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		0D62F21628D075BC00E343E7 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 		0D62F1EF28CD3A0A00E343E7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0D62F21328D074C300E343E7 /* Extensions */,
 				0D62F20928CE579200E343E7 /* Managers */,
 				0D62F1FF28CDF04C00E343E7 /* Models */,
 				0D62F1F728CD3CA000E343E7 /* Components */,
@@ -138,6 +149,8 @@
 			children = (
 				0D62F1F828CDCFB300E343E7 /* HomeItem.swift */,
 				0D62F20228CE401400E343E7 /* MapItemView.swift */,
+				0D62F21628D075BC00E343E7 /* AsyncImageView.swift */,
+				0D13748C28D098BF00E97A6E /* MessageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -155,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				0D62F20028CDF06000E343E7 /* Categories.swift */,
+				0D13748A28D0986100E97A6E /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,10 +194,19 @@
 			isa = PBXGroup;
 			children = (
 				0D62F20D28CE792000E343E7 /* ChatsView.swift */,
-				0D62F20F28CE792800E343E7 /* ChatViewModel.swift */,
+				0D62F20F28CE792800E343E7 /* ChatsViewModel.swift */,
 				0D62F21128CE83A000E343E7 /* ChatView.swift */,
+				0D13748E28D09C3600E97A6E /* ChatViewModel.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		0D62F21328D074C300E343E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D62F21428D074D700E343E7 /* Main.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,17 +282,22 @@
 				0D62F1E428CD357400E343E7 /* ContentView.swift in Sources */,
 				0D62F20128CDF06000E343E7 /* Categories.swift in Sources */,
 				0D62F1F928CDCFB300E343E7 /* HomeItem.swift in Sources */,
+				0D13748B28D0986100E97A6E /* Message.swift in Sources */,
 				0D62F1FE28CDEB9300E343E7 /* AddViewModel.swift in Sources */,
 				0D62F1FC28CDE96300E343E7 /* AddView.swift in Sources */,
 				0D62F20328CE401400E343E7 /* MapItemView.swift in Sources */,
 				0D62F20E28CE792000E343E7 /* ChatsView.swift in Sources */,
 				0D62F21228CE83A000E343E7 /* ChatView.swift in Sources */,
 				0D62F20828CE443F00E343E7 /* MapViewModel.swift in Sources */,
-				0D62F21028CE792800E343E7 /* ChatViewModel.swift in Sources */,
+				0D62F21028CE792800E343E7 /* ChatsViewModel.swift in Sources */,
+				0D13748D28D098BF00E97A6E /* MessageView.swift in Sources */,
+				0D62F21528D074D700E343E7 /* Main.swift in Sources */,
 				0D62F1F628CD3A4200E343E7 /* HomeView.swift in Sources */,
 				0D62F20B28CE57AD00E343E7 /* LocationManager.swift in Sources */,
+				0D62F21728D075BC00E343E7 /* AsyncImageView.swift in Sources */,
 				0D62F20628CE442C00E343E7 /* MapView.swift in Sources */,
 				0D62F1F228CD3A2200E343E7 /* TabsView.swift in Sources */,
+				0D13748F28D09C3600E97A6E /* ChatViewModel.swift in Sources */,
 				0D62F1E228CD357400E343E7 /* Where__Find_Your_Lost_ThingsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

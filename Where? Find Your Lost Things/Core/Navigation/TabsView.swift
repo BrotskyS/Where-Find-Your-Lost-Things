@@ -37,6 +37,12 @@ struct TabsView: View {
                     Label("Account", systemImage: "person")
                 }
         }
+        .onAppear {
+            if #available(iOS 15.0, *) {
+                let appearance = UITabBarAppearance()
+                UITabBar.appearance().scrollEdgeAppearance = appearance
+            }
+        }
     }
 }
 
