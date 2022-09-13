@@ -46,7 +46,7 @@ struct HomeItem: View {
                 
         }
         
-        .background(.ultraThinMaterial)
+        .background(Color("Secondary"))
         .cornerRadius(10)
         
     }
