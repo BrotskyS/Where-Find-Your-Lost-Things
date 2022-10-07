@@ -32,7 +32,10 @@ struct HomeView: View {
                 
                 LazyVGrid(columns: adaptiveColumns, spacing: 10) {
                     ForEach(data, id: \.self){ item in
-                        HomeItem()
+                        NavigationLink(destination: LostItemView()) {
+                            HomeItem()
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
                 Spacer()

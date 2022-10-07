@@ -17,20 +17,28 @@ struct AddView: View {
     }
     
     var body: some View {
-        NavigationView{
-            ZStack{
-                Color("Background").ignoresSafeArea()
+            NavigationView{
+                ZStack{
+                   
+                    NavigationLink(destination: SetPinMapView(currentRegion: $vm.region, region: vm.region), isActive: $vm.showFullMap) {
+                        Color.clear
+                    }
+                    
+                    Color("Background").ignoresSafeArea()
+                    
+                    content
+                    
+                }
+                .navigationTitle("Create ad")
                 
-                content
+              
             }
-            .navigationTitle("Create ad")
-        }
     }
     
     var content: some View {
         ScrollView{
             VStack(spacing: 20){
-                Picker("Add type", selection: $vm.addType){
+                Picker("Add type", selection: $vm.itemType){
                     Text("I Lost")
                         .tag(AddType.lost)
                     Text("I Found")
@@ -48,11 +56,22 @@ struct AddView: View {
                 
                 phoneInput
                 
-                saveButton
+                priveInput
+                
+                
+                Button{
+                    vm.save()
+                } label: {
+                    saveButton
+                }
+                .disabled(!vm.canSubmit)
+                
+                
                 
                 Spacer()
             }
             .padding()
+            
         }
     }
     
@@ -62,7 +81,10 @@ struct AddView: View {
                 if let image = vm.images.first {
                     Image(uiImage: image)
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
+                        .aspectRatio(contentMode: .fill)
+                        .showPreview(image: image) {
+                            
+                        }
                 } else {
                     Image(systemName: "text.below.photo")
                         .font(.title2)
@@ -70,9 +92,10 @@ struct AddView: View {
                     Text("Add photo")
                         .font(.headline)
                 }
-             
+                
             }
             .frame(maxWidth: .infinity, idealHeight:  200)
+            .clipped()
             .background(Color("Secondary"))
             
             
@@ -82,16 +105,17 @@ struct AddView: View {
                         if let image = vm.images[safe: item] {
                             Image(uiImage: image)
                                 .resizable()
-                                .aspectRatio(contentMode: .fit)
+                                .aspectRatio(contentMode: .fill)
                                 .frame(maxWidth: .infinity, maxHeight: 50)
                         } else {
                             Image(systemName: "plus.circle.fill")
                                 .frame(maxWidth: .infinity)
                                 .padding()
-                              
+                            
                         }
                     }
                     .background(Color("Secondary"))
+                    .clipped()
                 }
             }
         }
@@ -110,10 +134,23 @@ struct AddView: View {
             Text("Ad title*")
                 .font(.caption)
                 .foregroundColor(.gray)
-            TextField("I lost my keys", text: $vm.title)
+            
+            HStack{
+                TextField("I lost my keys", text: $vm.title)
+                    .padding(10)
+                    .padding(.trailing, 45)
+                    .background(Color("Secondary"))
+                    .cornerRadius(5)
+            }
+            
+        }
+        .overlay {
+            Text("\(vm.title.count)/\(vm.maxTitleCountText)")
+                .foregroundColor(vm.title.count > vm.maxTitleCountText ? .red : .gray)
+                .font(.caption)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
                 .padding(10)
-                .background(Color("Secondary"))
-                .cornerRadius(5)
+            
         }
     }
     
@@ -123,16 +160,34 @@ struct AddView: View {
                 .font(.caption)
                 .foregroundColor(.gray)
             
-            TextEditor(text: $vm.description)
+            if #available(iOS 16.0, *) { // UITextView.appearance().backgroundColor = .clear not work in IOS 16
+                TextEditor(text: $vm.description)
+                    .padding(10)
+                    .background(Color("Secondary"))
+                    .frame(maxWidth: .infinity, minHeight: 200)
+                    .cornerRadius(5)
+                    .scrollContentBackground(.hidden)
+            }else {
+                TextEditor(text: $vm.description)
+                    .padding(10)
+                    .background(Color("Secondary"))
+                    .frame(maxWidth: .infinity, minHeight: 200)
+                    .cornerRadius(5)
+            }
+        }
+        .overlay {
+            Text("\(vm.description.count)/\(vm.maxDescriptionCountText)")
+                .foregroundColor(vm.description.count > vm.maxDescriptionCountText ? .red : .gray)
+                .font(.caption)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
                 .padding(10)
-                .background(Color("Secondary"))
-                .frame(maxWidth: .infinity, minHeight: 200)
-                .cornerRadius(5)
+            
         }
     }
     
     var location: some View {
         Map(coordinateRegion: $vm.region)
+            .disabled(true)
             .frame(maxWidth: .infinity, minHeight: 200)
         
             .overlay(
@@ -140,7 +195,7 @@ struct AddView: View {
                     Image(systemName: "mappin")
                     
                     VStack(alignment: .leading) {
-                        Text("Your location")
+                        Text("Location whene you lost your item")
                             .font(.caption2)
                             .foregroundColor(.gray)
                         Text("Тернопіль. Тернопілька область")
@@ -156,7 +211,14 @@ struct AddView: View {
                 
                 
             )
+            .overlay(
+                CustonMapPin()
+            )
+        
             .cornerRadius(5)
+            .onTapGesture {
+                vm.showFullMap = true
+            }
         
         
     }
@@ -166,10 +228,24 @@ struct AddView: View {
             Text("Your Phone Number")
                 .font(.caption)
                 .foregroundColor(.gray)
-            TextField("+38067....", text: $vm.phone)
+            TextField("+38067....", text: $vm.phoneNumber)
                 .padding(10)
                 .background(Color("Secondary"))
                 .cornerRadius(5)
+                .keyboardType(.phonePad)
+        }
+    }
+    
+    var priveInput: some View {
+        VStack(alignment: .leading, spacing: 10){
+            Text("Specify the reward (option)")
+                .font(.caption)
+                .foregroundColor(.gray)
+            TextField("0$", text: $vm.price)
+                .padding(10)
+                .background(Color("Secondary"))
+                .cornerRadius(5)
+                .keyboardType(.numberPad)
         }
     }
     
@@ -181,7 +257,9 @@ struct AddView: View {
             .background(Color("AccentColor"))
             .cornerRadius(10)
             .padding(.top, 50)
-            
+            .opacity(vm.canSubmit ? 1 : 0.7)
+            .animation(.default, value: vm.canSubmit)
+        
     }
     
     
@@ -201,7 +279,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     @Binding var images: [UIImage]
     @Binding var picker: Bool
     
-  
+    
     
     func makeUIViewController(context: Context) -> PHPickerViewController {
         var config = PHPickerConfiguration()
@@ -238,7 +316,7 @@ struct ImagePicker: UIViewControllerRepresentable {
                         DispatchQueue.main.async {
                             self.parent.images.append(image1 as! UIImage)
                         }
-                   
+                        
                     }
                 }
                 else {
@@ -251,7 +329,9 @@ struct ImagePicker: UIViewControllerRepresentable {
 
 
 extension Collection where Indices.Iterator.Element == Index {
-   public subscript(safe index: Index) -> Iterator.Element? {
-     return (startIndex <= index && index < endIndex) ? self[index] : nil
-   }
+    public subscript(safe index: Index) -> Iterator.Element? {
+        return (startIndex <= index && index < endIndex) ? self[index] : nil
+    }
 }
+
+

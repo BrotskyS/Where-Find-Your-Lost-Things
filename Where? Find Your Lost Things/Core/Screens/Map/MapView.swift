@@ -31,6 +31,9 @@ struct MapView: View {
     var body: some View {
         NavigationView{
             ZStack{
+                NavigationLink(destination: LostItemView(),isActive: $vm.openLostItem) {
+                    Color.clear
+                }
                 Map(coordinateRegion: $locationManager.region, showsUserLocation: true, annotationItems: vm.annotations) { item in
                     MapAnnotation(coordinate: item.coordinate) {
                         PlaceAnnotationView()
@@ -49,12 +52,12 @@ struct MapView: View {
                 
                 
                 if vm.selectedAnotation != nil {
-                    selectedItem
+                        selectedItem
+
                 }
-                
-                
-              
             }
+          
+            .navigationTitle("Map")
         }
     }
     
@@ -97,6 +100,9 @@ struct MapView: View {
         .frame(maxHeight: .infinity, alignment: .bottom)
         .transition(.move(edge: .bottom))
         .zIndex(1)
+        .onTapGesture {
+            vm.openLostItem = true
+        }
     }
     
     

@@ -10,4 +10,6 @@ import Foundation
 
 class ChatsViewModel: ObservableObject {
     @Published var searchText: String = ""
+    @Published var title: String = ""
+    @Published var isChatOpen: Bool = false
 }

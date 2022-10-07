@@ -12,24 +12,29 @@ struct HomeItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             AsyncImage(url: URL(string: "https://swiftanytime-content.s3.ap-south-1.amazonaws.com/SwiftUI-Beginner/Async-Image/TestImage.jpeg")) { image in
-                      image
-                          .resizable()
-                          .aspectRatio(contentMode: .fill)
-                          
-                  } placeholder: {
-                      ProgressView()
-                  }
-                  .frame(width: 170, height: 170)
-                  .overlay(
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.green)
-                        .padding(10)
-                        .background(.ultraThinMaterial)
-                        .cornerRadius(10)
-                        .shadow(color: Color("Shadow").opacity(0.5), radius: 10, x: 0, y: 0)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                        .padding()
-                  )
+                image
+              
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                
+                    
+
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 170, height: 170)
+            .overlay(
+                Image(systemName: "magnifyingglass")
+                   
+                    .foregroundColor(.green)
+                    .padding(10)
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(10)
+                    .shadow(color: Color("Shadow").opacity(0.5), radius: 10, x: 0, y: 0)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    .padding()
+                
+            )
             VStack(alignment: .leading, spacing: 5) {
                 Text("Загубились ключі")
                     .font(.title3.bold())
@@ -42,8 +47,8 @@ struct HomeItem: View {
                 .font(.caption2)
             }
             .padding(10)
-     
-                
+            
+            
         }
         
         .background(Color("Secondary"))
