@@ -17,21 +17,26 @@ struct ChatsView: View {
     }
     
     var body: some View {
-        NavigationView{
-            ZStack{
-                Color("Background").ignoresSafeArea()
-                
-                content
+        ZStack {
+            NavigationView{
+                ZStack{
+                    Color("Background").ignoresSafeArea()
+                    
+                    content
+                }
+                .navigationTitle("All Chats")
+                .searchable(text: $vm.searchText, placement: .navigationBarDrawer(displayMode: .automatic), prompt: Text("Search"))
             }
-            .navigationTitle("All Chats")
-            .searchable(text: $vm.searchText, placement: .navigationBarDrawer(displayMode: .automatic), prompt: Text("Search"))
+            
+            NavigationLink(destination: ChatView(title: vm.title), isActive: $vm.isChatOpen) {
+                Color.clear
+            }
         }
     }
     
     var content: some View {
         List{
             ForEach(0...10, id: \.self) { item in
-                NavigationLink(destination: ChatView()) {
                     HStack(spacing: 0){
                         AsyncImage(url: URL(string: "https://swiftanytime-content.s3.ap-south-1.amazonaws.com/SwiftUI-Beginner/Async-Image/TestImage.jpeg")) { image in
                                   image
@@ -71,9 +76,12 @@ struct ChatsView: View {
                             
                         }
                     }
+                    .onTapGesture {
+                        vm.title = "Anton\(item)"
+                        vm.isChatOpen = true
+                    }
                     
                     .listRowBackground(Color("Secondary"))
-                }
             }
         }
     }

@@ -7,35 +7,43 @@
 
 import SwiftUI
 
+
 struct TabsView: View {
+
     
     var body: some View {
-        TabView {
+        TabView() {
+
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
-            
+                
+
             MapView()
                 .tabItem {
                     Label("Map", systemImage: "map")
                 }
-            
+                
+
             AddView()
                 .tabItem {
                     Label("Add", systemImage: "plus.circle.fill")
                         .font(.largeTitle)
                 }
+                
             
             ChatsView()
                 .tabItem {
                     Label("Chat", systemImage: "bell")
                 }
-            
-            HomeView()
+                
+
+            AccountView()
                 .tabItem {
                     Label("Account", systemImage: "person")
                 }
+                
         }
         .onAppear {
             if #available(iOS 15.0, *) {
@@ -51,3 +59,8 @@ struct TabView_Previews: PreviewProvider {
         TabsView()
     }
 }
+
+
+
+
+

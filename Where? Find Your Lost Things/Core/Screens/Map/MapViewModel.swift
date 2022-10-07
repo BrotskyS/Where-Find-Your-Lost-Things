@@ -16,6 +16,7 @@ struct City: Identifiable {
 
 class MapViewModel: ObservableObject {
     @Published var selectedAnotation: String?
+    @Published var openLostItem: Bool = false
     
     let annotations = [
         City(name: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275)),

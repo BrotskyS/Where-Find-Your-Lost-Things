@@ -12,6 +12,8 @@ struct ChatView: View {
 
     @ObservedObject var vm = ChatViewModel()
     
+    var title: String = "Anton"
+    
     var messageArray = ["Hi", "How are you?", "Lets come to me"]
     
     var body: some View {
@@ -28,7 +30,7 @@ struct ChatView: View {
             }
             textField
         }
-        .navigationTitle("Anton")
+        .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
