@@ -66,15 +66,10 @@ struct CustomTextInput: View {
                         
                     }
                     
-                    //                    if isError{
+                    
                     Divider()
                         .frame(height: isError ?  2 : 1)
                         .background(isError ? .red : .secondary)
-                    //                    } else {
-                    //                        Divider()
-                    //                    }
-                    
-                    
                 }
             }
         }

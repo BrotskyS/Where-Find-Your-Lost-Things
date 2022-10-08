@@ -76,6 +76,7 @@
 		0DDECF5128EB801E008810C7 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDECF5028EB801E008810C7 /* FirebaseRemoteConfigSwift */; };
 		0DDECF5328EB801E008810C7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDECF5228EB801E008810C7 /* FirebaseStorage */; };
 		0DDECF5528EB801E008810C7 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDECF5428EB801E008810C7 /* FirebaseStorageCombine-Community */; };
+		0DEEDE3728F214DC004FB020 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEEDE3628F214DC004FB020 /* UserRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		0DDECF1928EB5C0B008810C7 /* SetPinMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPinMapView.swift; sourceTree = "<group>"; };
 		0DDECF1B28EB5C40008810C7 /* SetPinMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPinMapViewModel.swift; sourceTree = "<group>"; };
 		0DDECF1D28EB6048008810C7 /* CustonMapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonMapPin.swift; sourceTree = "<group>"; };
+		0DEEDE3628F214DC004FB020 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				0D1DD4B828E610ED00774326 /* LostItemRepository.swift */,
+				0DEEDE3628F214DC004FB020 /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				0D62F20B28CE57AD00E343E7 /* LocationManager.swift in Sources */,
 				0D62F21728D075BC00E343E7 /* AsyncImageView.swift in Sources */,
 				0D62F20628CE442C00E343E7 /* MapView.swift in Sources */,
+				0DEEDE3728F214DC004FB020 /* UserRepository.swift in Sources */,
 				0D8CF9E328F06D2700C8DA3F /* LoginView.swift in Sources */,
 				0D62F1F228CD3A2200E343E7 /* TabsView.swift in Sources */,
 				0D42745C28D0D3B000634EF1 /* LostItemView.swift in Sources */,

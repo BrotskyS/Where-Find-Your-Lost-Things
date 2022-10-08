@@ -15,10 +15,12 @@ struct CustomButton: View {
     var isDisabled: Bool = false
     var backgroundColor: Color = Color.accentColor
     
-
+    
+    let action: () -> Void
+    
     var body: some View {
         Button{
-            
+            action()
         } label: {
             HStack{
                 if isLoading {
@@ -27,16 +29,14 @@ struct CustomButton: View {
                     
                     Text(loadingText)
                         .padding()
-                        .foregroundColor(.white)
                         .font(.body.bold())
                 } else{
                     Text(text)
                         .padding()
-                        .foregroundColor(.white)
                         .font(.body.bold())
                 }
-             
-                    
+                
+                
             }
             .frame(maxWidth: .infinity)
             .background(backgroundColor)
@@ -57,13 +57,18 @@ struct CustomButton: View {
             }
             
         }
+
+    
         .disabled(isDisabled)
+        .buttonStyle(.plain)
     }
 }
 
 struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
-        CustomButton(text: "Login", leftIcon: Image("Google"), isLoading: true, loadingText: "Loading...")
-            .padding()
+        CustomButton(text: "Login", leftIcon: Image("Google"), isLoading: true, loadingText: "Loading..."){
+            
+        }
+        .padding()
     }
 }
