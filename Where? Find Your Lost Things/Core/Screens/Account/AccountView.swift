@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct AccountView: View {
+    @StateObject var vm = AccountViewModel()
     var body: some View {
-        Text("AccountView")
+        NavigationView {
+            Button{
+                vm.logout()
+            } label: {
+                Text("Sign out")
+            }
+        }
+        .buttonStyle(.bordered)
     }
 }
 

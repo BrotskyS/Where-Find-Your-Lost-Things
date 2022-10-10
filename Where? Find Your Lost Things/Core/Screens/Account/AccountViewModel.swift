@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+class AccountViewModel: ObservableObject {
+    private let userRepository = UserRepository()
+    
+    func logout(){
+        userRepository.logout()
+    }
+}

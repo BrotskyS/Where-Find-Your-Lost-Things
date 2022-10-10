@@ -35,8 +35,13 @@
 		0D62F21728D075BC00E343E7 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F21628D075BC00E343E7 /* AsyncImageView.swift */; };
 		0D8CF9D728EF86AF00C8DA3F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CF9D628EF86AF00C8DA3F /* Image.swift */; };
 		0D8CF9DB28EF8F0900C8DA3F /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CF9DA28EF8F0900C8DA3F /* ImageViewer.swift */; };
+		0D8CF9E128F06D2000C8DA3F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CF9E028F06D2000C8DA3F /* LoginViewModel.swift */; };
+		0D8CF9E328F06D2700C8DA3F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CF9E228F06D2700C8DA3F /* LoginView.swift */; };
+		0D8CF9E528F0744F00C8DA3F /* CustomTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8CF9E428F0744F00C8DA3F /* CustomTextInput.swift */; };
 		0D92424228EB8F2E0085BB35 /* ExpandedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D92424128EB8F2E0085BB35 /* ExpandedImageView.swift */; };
 		0D92424428EB8F330085BB35 /* ExpandedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D92424328EB8F330085BB35 /* ExpandedImageViewModel.swift */; };
+		0DB2689A28F07CC400CB2456 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2689928F07CC400CB2456 /* CustomButton.swift */; };
+		0DB2689C28F082D800CB2456 /* LabelledDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2689B28F082D800CB2456 /* LabelledDivider.swift */; };
 		0DB36E9128D7489D00AED809 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB36E9028D7489D00AED809 /* AccountView.swift */; };
 		0DB36E9328D748A300AED809 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB36E9228D748A300AED809 /* AccountViewModel.swift */; };
 		0DB36E9E28D74EDB00AED809 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DB36E9D28D74EDB00AED809 /* GoogleService-Info.plist */; };
@@ -71,6 +76,7 @@
 		0DDECF5128EB801E008810C7 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDECF5028EB801E008810C7 /* FirebaseRemoteConfigSwift */; };
 		0DDECF5328EB801E008810C7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDECF5228EB801E008810C7 /* FirebaseStorage */; };
 		0DDECF5528EB801E008810C7 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDECF5428EB801E008810C7 /* FirebaseStorageCombine-Community */; };
+		0DEEDE3728F214DC004FB020 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEEDE3628F214DC004FB020 /* UserRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,8 +109,13 @@
 		0D62F21628D075BC00E343E7 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		0D8CF9D628EF86AF00C8DA3F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0D8CF9DA28EF8F0900C8DA3F /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
+		0D8CF9E028F06D2000C8DA3F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0D8CF9E228F06D2700C8DA3F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0D8CF9E428F0744F00C8DA3F /* CustomTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextInput.swift; sourceTree = "<group>"; };
 		0D92424128EB8F2E0085BB35 /* ExpandedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedImageView.swift; sourceTree = "<group>"; };
 		0D92424328EB8F330085BB35 /* ExpandedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedImageViewModel.swift; sourceTree = "<group>"; };
+		0DB2689928F07CC400CB2456 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0DB2689B28F082D800CB2456 /* LabelledDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledDivider.swift; sourceTree = "<group>"; };
 		0DB36E9028D7489D00AED809 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		0DB36E9228D748A300AED809 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		0DB36E9D28D74EDB00AED809 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -112,6 +123,7 @@
 		0DDECF1928EB5C0B008810C7 /* SetPinMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPinMapView.swift; sourceTree = "<group>"; };
 		0DDECF1B28EB5C40008810C7 /* SetPinMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPinMapViewModel.swift; sourceTree = "<group>"; };
 		0DDECF1D28EB6048008810C7 /* CustonMapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonMapPin.swift; sourceTree = "<group>"; };
+		0DEEDE3628F214DC004FB020 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				0D1DD4B828E610ED00774326 /* LostItemRepository.swift */,
+				0DEEDE3628F214DC004FB020 /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -234,6 +247,7 @@
 		0D62F1F328CD3A2F00E343E7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0D8CF9DF28F06CF700C8DA3F /* Login */,
 				0DDECF1828EB5BC7008810C7 /* SetPinMap */,
 				0DB36E8F28D7488F00AED809 /* Account */,
 				0D42745828D0D38C00634EF1 /* LostItem */,
@@ -263,6 +277,9 @@
 				0D13748C28D098BF00E97A6E /* MessageView.swift */,
 				0DDECF1D28EB6048008810C7 /* CustonMapPin.swift */,
 				0D8CF9DA28EF8F0900C8DA3F /* ImageViewer.swift */,
+				0D8CF9E428F0744F00C8DA3F /* CustomTextInput.swift */,
+				0DB2689928F07CC400CB2456 /* CustomButton.swift */,
+				0DB2689B28F082D800CB2456 /* LabelledDivider.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -328,6 +345,15 @@
 			children = (
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		0D8CF9DF28F06CF700C8DA3F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0D8CF9E028F06D2000C8DA3F /* LoginViewModel.swift */,
+				0D8CF9E228F06D2700C8DA3F /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		0D92424028EB8F0A0085BB35 /* ExpandedImage */ = {
@@ -479,6 +505,7 @@
 				0D62F1E428CD357400E343E7 /* ContentView.swift in Sources */,
 				0D62F20128CDF06000E343E7 /* Categories.swift in Sources */,
 				0D1DD4B928E610ED00774326 /* LostItemRepository.swift in Sources */,
+				0D8CF9E528F0744F00C8DA3F /* CustomTextInput.swift in Sources */,
 				0D62F1F928CDCFB300E343E7 /* HomeItem.swift in Sources */,
 				0D13748B28D0986100E97A6E /* Message.swift in Sources */,
 				0D62F1FE28CDEB9300E343E7 /* AddViewModel.swift in Sources */,
@@ -487,12 +514,15 @@
 				0D62F20E28CE792000E343E7 /* ChatsView.swift in Sources */,
 				0D92424228EB8F2E0085BB35 /* ExpandedImageView.swift in Sources */,
 				0DB36E9128D7489D00AED809 /* AccountView.swift in Sources */,
+				0DB2689C28F082D800CB2456 /* LabelledDivider.swift in Sources */,
 				0D62F21228CE83A000E343E7 /* ChatView.swift in Sources */,
+				0D8CF9E128F06D2000C8DA3F /* LoginViewModel.swift in Sources */,
 				0DB36E9328D748A300AED809 /* AccountViewModel.swift in Sources */,
 				0D62F20828CE443F00E343E7 /* MapViewModel.swift in Sources */,
 				0D92424428EB8F330085BB35 /* ExpandedImageViewModel.swift in Sources */,
 				0DDECF1C28EB5C40008810C7 /* SetPinMapViewModel.swift in Sources */,
 				0D8CF9DB28EF8F0900C8DA3F /* ImageViewer.swift in Sources */,
+				0DB2689A28F07CC400CB2456 /* CustomButton.swift in Sources */,
 				0D1DD4BB28E6115A00774326 /* LostItem.swift in Sources */,
 				0D62F21028CE792800E343E7 /* ChatsViewModel.swift in Sources */,
 				0D13748D28D098BF00E97A6E /* MessageView.swift in Sources */,
@@ -504,6 +534,8 @@
 				0D62F20B28CE57AD00E343E7 /* LocationManager.swift in Sources */,
 				0D62F21728D075BC00E343E7 /* AsyncImageView.swift in Sources */,
 				0D62F20628CE442C00E343E7 /* MapView.swift in Sources */,
+				0DEEDE3728F214DC004FB020 /* UserRepository.swift in Sources */,
+				0D8CF9E328F06D2700C8DA3F /* LoginView.swift in Sources */,
 				0D62F1F228CD3A2200E343E7 /* TabsView.swift in Sources */,
 				0D42745C28D0D3B000634EF1 /* LostItemView.swift in Sources */,
 				0D13748F28D09C3600E97A6E /* ChatViewModel.swift in Sources */,
