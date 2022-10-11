@@ -29,36 +29,41 @@ struct MapView: View {
     @EnvironmentObject var locationManager: LocationManager
     
     var body: some View {
-        NavigationView{
-            ZStack{
-                NavigationLink(destination: LostItemView(),isActive: $vm.openLostItem) {
-                    Color.clear
-                }
-                Map(coordinateRegion: $locationManager.region, showsUserLocation: true, annotationItems: vm.annotations) { item in
-                    MapAnnotation(coordinate: item.coordinate) {
-                        PlaceAnnotationView()
-                            .scaleEffect(item.name == vm.selectedAnotation ? 1 : 0.7)
-                            .animation(.default, value: vm.selectedAnotation)
-                            .onTapGesture {
-                                vm.setSelectedAnotation(name: item.name)
-                            }
-                    }
-                    
-                }
-                .onAppear{
-                    locationManager.checkIfLocatinServicesIsEnable()
-                }
-                .ignoresSafeArea()
-                
-                
-                if vm.selectedAnotation != nil {
-                        selectedItem
-
-                }
+        ZStack{
+            NavigationLink(destination: LostItemView(),isActive: $vm.openLostItem) {
+                Color.clear
             }
-          
-            .navigationTitle("Map")
+            Map(coordinateRegion: $locationManager.region, showsUserLocation: true, annotationItems: vm.annotations) { item in
+                MapAnnotation(coordinate: item.coordinate) {
+                    PlaceAnnotationView()
+                        .scaleEffect(item.name == vm.selectedAnotation ? 1 : 0.7)
+                        .animation(.default, value: vm.selectedAnotation)
+                        .onTapGesture {
+                            vm.setSelectedAnotation(name: item.name)
+                        }
+                }
+                
+            }
+            .onAppear{
+                locationManager.checkIfLocatinServicesIsEnable()
+            }
+            .ignoresSafeArea()
+            
+            
+            if vm.selectedAnotation != nil {
+                selectedItem
+                
+            }
         }
+        .overlay(content: {
+            Text("Map")
+                .font(.largeTitle.bold())
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                .offset(x: 15, y: 35)
+        })
+        
+        
+        
     }
     
     

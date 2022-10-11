@@ -46,6 +46,7 @@
 		0DB36E9328D748A300AED809 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB36E9228D748A300AED809 /* AccountViewModel.swift */; };
 		0DB36E9E28D74EDB00AED809 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DB36E9D28D74EDB00AED809 /* GoogleService-Info.plist */; };
 		0DB36EA128D74FD900AED809 /* FirebaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB36EA028D74FD900AED809 /* FirebaseServices.swift */; };
+		0DD60AF428F5A49400E019EC /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD60AF328F5A49400E019EC /* CustomNavBarView.swift */; };
 		0DDECF1A28EB5C0B008810C7 /* SetPinMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDECF1928EB5C0B008810C7 /* SetPinMapView.swift */; };
 		0DDECF1C28EB5C40008810C7 /* SetPinMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDECF1B28EB5C40008810C7 /* SetPinMapViewModel.swift */; };
 		0DDECF1E28EB6048008810C7 /* CustonMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDECF1D28EB6048008810C7 /* CustonMapPin.swift */; };
@@ -120,6 +121,7 @@
 		0DB36E9228D748A300AED809 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		0DB36E9D28D74EDB00AED809 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0DB36EA028D74FD900AED809 /* FirebaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServices.swift; sourceTree = "<group>"; };
+		0DD60AF328F5A49400E019EC /* CustomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
 		0DDECF1928EB5C0B008810C7 /* SetPinMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPinMapView.swift; sourceTree = "<group>"; };
 		0DDECF1B28EB5C40008810C7 /* SetPinMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPinMapViewModel.swift; sourceTree = "<group>"; };
 		0DDECF1D28EB6048008810C7 /* CustonMapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonMapPin.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		0D62F1F728CD3CA000E343E7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0DD60AF228F5A47C00E019EC /* CustomNavBar */,
 				0D92424028EB8F0A0085BB35 /* ExpandedImage */,
 				0D62F1F828CDCFB300E343E7 /* HomeItem.swift */,
 				0D62F20228CE401400E343E7 /* MapItemView.swift */,
@@ -380,6 +383,14 @@
 				0DB36EA028D74FD900AED809 /* FirebaseServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0DD60AF228F5A47C00E019EC /* CustomNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				0DD60AF328F5A49400E019EC /* CustomNavBarView.swift */,
+			);
+			path = CustomNavBar;
 			sourceTree = "<group>";
 		};
 		0DDECF1828EB5BC7008810C7 /* SetPinMap */ = {
@@ -510,6 +521,7 @@
 				0D13748B28D0986100E97A6E /* Message.swift in Sources */,
 				0D62F1FE28CDEB9300E343E7 /* AddViewModel.swift in Sources */,
 				0D62F1FC28CDE96300E343E7 /* AddView.swift in Sources */,
+				0DD60AF428F5A49400E019EC /* CustomNavBarView.swift in Sources */,
 				0D62F20328CE401400E343E7 /* MapItemView.swift in Sources */,
 				0D62F20E28CE792000E343E7 /* ChatsView.swift in Sources */,
 				0D92424228EB8F2E0085BB35 /* ExpandedImageView.swift in Sources */,
