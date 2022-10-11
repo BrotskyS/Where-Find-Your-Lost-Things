@@ -44,6 +44,7 @@ struct HomeView: View {
             .padding()
             
         }
+        
 //        .searchable(text: .constant(""), placement: .navigationBarDrawer(displayMode: .automatic), prompt: Text("Search"))
     }
 }
