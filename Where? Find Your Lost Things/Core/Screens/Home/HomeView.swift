@@ -14,7 +14,7 @@ struct HomeView: View {
         GridItem(.adaptive(minimum: 170))
     ]
     var body: some View {
-        NavigationView{
+        CustomNavBarView(title: "Home"){
             ZStack{
                 Color("Background").ignoresSafeArea()
                 
@@ -44,9 +44,7 @@ struct HomeView: View {
             .padding()
             
         }
-        .navigationTitle("Home")
-        .navigationBarTitleDisplayMode(.inline)
-        .searchable(text: .constant(""), placement: .navigationBarDrawer(displayMode: .automatic), prompt: Text("Search"))
+//        .searchable(text: .constant(""), placement: .navigationBarDrawer(displayMode: .automatic), prompt: Text("Search"))
     }
 }
 

@@ -14,10 +14,11 @@ struct AddView: View {
     
     init() {
         UITextView.appearance().backgroundColor = .clear
+        
     }
     
     var body: some View {
-            NavigationView{
+        CustomNavBarView(title: "Create ad"){
                 ZStack{
                    
                     NavigationLink(destination: SetPinMapView(currentRegion: $vm.region, region: vm.region), isActive: $vm.showFullMap) {
@@ -28,9 +29,7 @@ struct AddView: View {
                     
                     content
                     
-                }
-                .navigationTitle("Create ad")
-                
+                }        
               
             }
     }
